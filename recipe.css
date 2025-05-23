@@ -1,127 +1,129 @@
-* {
-    box-sizing: border-box;
+/* Box sizing and reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-    background-color: hsl(30, 54%, 90%);
-    max-width: 100%;
-    display: flex;
+  background-color: hsl(30, 54%, 90%);
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  line-height: 1.6;
+  color: hsl(14, 45%, 36%);
 }
 
-@font-face {
-    font-family: "outfit";
-    src: url(../website/static/Outfit-Bold.ttf);
-}
-
+/* Container */
 .container {
-    width: 992px;
-    background: white;
-    padding: 30px;
-    margin: 60px auto 0;
-    border-radius: 20px;
+  width: 90%;
+  max-width: 992px;
+  background: #fff;
+  padding: 2rem 2.5rem;
+  margin: 60px auto 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.container h1, p {
-    margin-left: 10px;
+/* Headings */
+h1, h2, h3 {
+  margin-top: 0;
+  font-weight: 700;
 }
 
-.container p {
-    text-wrap: balance;
+h1 {
+  font-size: 2.4rem;
+  color: hsl(14, 45%, 36%);
+  margin-bottom: 0.5rem;
 }
 
-.container img {
-    display: block;
-    max-width: 100%;
-    border-radius: 20px;
-}
-
-.section1 {
-    background-color: hsla(327, 44%, 95%, 0.442);
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-top: 40px;
-    margin-right: 20px;
-}
-
-.section1 ul li {
-    margin: 10px;
-}
-
-.section1 ul {
-    padding-bottom: 10px;
-}
-
-.section1 h3 {
-    padding-left: 30px;
-
-}
-
-.section1 ul li::marker {
-    color: hsl(332, 51%, 32%);
-}
-
-.section2 ul li::marker {
-    color: hsl(14, 45%, 36%);
-}
-
-.section2 ul li {
-    margin: 10px;
-}
-
-.section2 h2 {
-    padding-left: 30px;
-}
-
-.section2 {
-    padding-bottom: 10px;
-}
-
-.section3 ol li::marker {
-    color: hsl(14, 45%, 36%);
-}
-
-.section3 ol li {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin: 10px;
-    padding-bottom: 5px;
-}
-
-.section3 h2 {
-    padding-left: 30px;
-}
-
-.section4 {
-    margin-left: 30px;
-}
-
-.section4 table td{
-    /* border-bottom: 1px solid hsl(30, 18%, 87%); */
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 20px;
-}
-
-.nut1, .nut2, .nut3 {
-    border-bottom: 1px solid hsl(30, 18%, 87%);
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: hsl(14, 45%, 36%);
 }
 
 h3 {
-    color: hsl(332, 51%, 32%);
+  font-size: 1.3rem;
+  color: hsl(332, 51%, 32%);
+  margin-bottom: 0.5rem;
 }
 
-h2, .nut1, .nut2, .nut3, .nut4, .nut5 {
-    color: hsl(14, 45%, 36%);
+/* Paragraphs */
+p {
+  margin: 0 0 1.5rem 10px;
+  text-wrap: balance;
+  font-size: 1rem;
+  color: hsl(14, 45%, 36%);
 }
 
-table {
-    width: 100%;
+/* Image */
+.container img {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 20px;
+  margin: 0 auto 2rem auto;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-/* @media screen and (max-width: 1440) {
-    .container {
-        background: rgb(228, 13, 13);
-        width: 100%;
-    }
-} */
+/* Sections */
+section {
+  margin: 2rem 0;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  background-color: hsla(327, 44%, 95%, 0.44);
+  border-radius: 12px;
+}
+
+/* Lists styling */
+ul, ol {
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+ul li, ol li {
+  margin: 0.7rem 0;
+  font-size: 1rem;
+  color: hsl(14, 45%, 36%);
+}
+
+/* Custom list markers */
+.section1 ul li::marker {
+  color: hsl(332, 51%, 32%);
+}
+
+.section2 ul li::marker,
+.section3 ol li::marker {
+  color: hsl(14, 45%, 36%);
+}
+
+/* Nutrition table */
+.section4 {
+  background: transparent;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.section4 table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.8rem;
+}
+
+.section4 table td {
+  padding: 12px 20px;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+  font-size: 1rem;
+  color: hsl(14, 45%, 36%);
+}
+
+.section4 table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Nutrition value*
 
